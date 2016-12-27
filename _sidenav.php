@@ -42,12 +42,12 @@ define('CATEGORY', 'SELECT productid,singer,category,productname,releaseddate,ra
               $category = mysqli_query($db->conn, CATEGORY);
               while ($rows = mysqli_fetch_assoc($category)) { 
                 if ($rows['category'] == "band") { 
-                ?>
+              ?>
                 <li><?php echo'<a href="_content.php?viewalbum&productid='.$rows['productid'].'">'.$rows['singer'].'</a>'; ?></li>
               <?php
                 }
               }
-                ?>
+              ?>
               </ul>
           </div>
         </div>
@@ -55,6 +55,3 @@ define('CATEGORY', 'SELECT productid,singer,category,productname,releaseddate,ra
       <p class="pull-left visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">快速導覽</button>
       </p>
-
-
-
