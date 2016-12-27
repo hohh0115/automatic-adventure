@@ -8,7 +8,6 @@ if(!is_object($cart)) $cart = new edCart();
 //連結資料庫
 require_once 'productupload/sqlconnect.class.php';
 $db = new sqlconnect;
-
 $_SESSION['position'] = $_SERVER['REQUEST_URI']; //儲存登入前頁面
 ?> 
 <style type="text/css">
