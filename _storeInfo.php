@@ -12,7 +12,7 @@
 <?php 
 $page_title = "storeinfo";
 include 'navigation.php';
- ?>
+?>
   <div class="container">
     <div class="jumbotron">
       <h1>Hello, world!</h1>
