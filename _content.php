@@ -141,7 +141,6 @@ if (isset($_GET['productid']) == "") {
         <p class="text-muted">About Music Company.轉載必究.營業時間：週二至週日 1100~21:00.</p>
         </footer>
   </div> <!--end of container-->
-
 <!-- Modals that pop up the video-->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
