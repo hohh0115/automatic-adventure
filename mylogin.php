@@ -141,7 +141,7 @@ if (isset($_POST['submitBtn'])) {
             <p style="text-align:center;"><a href="index.php" onClick="">&nbsp;回首頁</a></p>
             </div>
           <?php
-            }
+            } //end of else
           ?>
         </div>
       </div>
