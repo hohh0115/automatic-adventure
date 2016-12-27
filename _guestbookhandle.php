@@ -13,4 +13,4 @@ if (isset($_POST['submitbtn'])) {
 	$commentres = mysqli_query($db->conn, $commentsql);
 	header("Location:_guestbook.php");
 }
- ?>
+?>
