@@ -6,7 +6,7 @@ $cart =& $_SESSION['edCart'];
 if(!is_object($cart)) $cart = new edCart();
 ?>
 <?php
-//執行購物車動作，資料由index.php傳入，這裡就不用再去資料表抓資料。
+//用switch決定執行哪個購物車動作，資料由index.php傳入。
 $DoSomeThing = (isset($_GET['A']) ? $_GET['A'] : "");
 var_dump($cart->items);
 switch($DoSomeThing){
