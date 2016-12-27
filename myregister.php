@@ -7,7 +7,7 @@ if( isset($_SESSION['user'])!="" ){
 require_once 'productupload/sqlconnect.class.php';
 $db = new sqlconnect;
 
-$error = false;
+$error = false; //追蹤驗證是否成功或失敗
 
 if (isset($_POST['singupBtn'])) { //確定註冊後先對資料做處理
   $username = trim($_POST['username']);
@@ -195,8 +195,6 @@ if (isset($_POST['singupBtn'])) { //確定註冊後先對資料做處理
       </div>
     </div>
   </div>
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
