@@ -32,7 +32,8 @@ include 'navigation.php';
             ?>
         <div class="col-lg-4 col-sm-6">
     			<?php
-    			if($rows['productimage'] != ""){
+    			if($rows['productimage'] != "")
+			{
     				$pic = $rows['productimage'];
     				echo '<img class="albumcover img-rounded" src="./productupload/uploadedimg/'.$pic.'" alt="Generic placeholder image">';
     			}
@@ -53,7 +54,6 @@ include 'navigation.php';
 } //while結束 php結束
  ?> 
         </div> <!--end of row-->
-
 <!-- START THE FEATURETTES -->
       <hr class="featurette-divider">
       <div class="row featurette">
