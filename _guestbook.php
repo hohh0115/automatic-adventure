@@ -68,20 +68,15 @@
 					        	<td>:</td>
 					        	<td><?php echo $rows['name']; ?></td>
 					        </tr>
-					        <!--<tr>
-					      		<td valign="top">主題</td>
-					      		<td valign="top">:</td>
-					      		<td>上傳的圖片</td>
-					      	</tr>-->
 					        <tr>
 					        	<td valign="top">內容</td>
 					        	<td valign="top">:</td>
 					        	<td><?php echo $rows['comment']; ?></td>
 					      	</tr>
 					      	<tr>
-								<td valign="top">日期 </td>
-								<td valign="top">:</td>
-								<td><?php echo $rows['datetime']; ?></td>
+							<td valign="top">日期 </td>
+							<td valign="top">:</td>
+							<td><?php echo $rows['datetime']; ?></td>
 							</tr>
 				    	</table>
 					</td>
