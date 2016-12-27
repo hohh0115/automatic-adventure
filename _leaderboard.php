@@ -43,10 +43,10 @@ include 'navigation.php';
               </tbody>
             <?php
             }  
-              ?>
+            ?>
             </table>
         <div class="col-xs-6 col-lg-4">
-          <!--
+          <!--尚未決定要不要使用
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
