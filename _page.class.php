@@ -83,7 +83,6 @@ class Page
 	}
 	// 顯示用
 	function fpage(){
-
 		$fpage = "";
 		$pages['0'] = "共{$this->total}條紀錄&nbsp;";
 		$pages['1'] = "&nbsp;本頁顯示".$this->currnums()."條紀錄&nbsp;";
@@ -105,5 +104,4 @@ class Page
 		  return $fpage;
 	}
 }
-
- ?>
+?>
