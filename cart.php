@@ -3,7 +3,7 @@
 $page_title = "cart";
 include 'navigation.php';
 if (!isset($_SESSION['user'])) {
-  header('Location: index.php'); //為登入會員即使從網址列進入也直接 跳轉
+  header('Location: index.php'); //假如已登入會員即使從網址列進入也直接跳轉
 }
 ?>
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ if (!isset($_SESSION['user'])) {
 			    </tr>
 			    <?php
 			 	} //end of else{}
-				?> 
+			    ?> 
 				</table>
 			</div>	
 		</div>  <!--end of row offcanvas-->
@@ -98,11 +98,11 @@ if (!isset($_SESSION['user'])) {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://getbootstrap.com/examples/offcanvas/offcanvas.js"></script>
 <script>
-	  $('#pop').click(function(){
+$('#pop').click(function(){
     $('#myModal .modal-title').html('Oops!');
     $('#myModal .modal-body').html('<p>謝謝你能走到最後一步看到這一段訊息，這個網站只是一個從零開始構建的練習作品而已，在後來主要是由php架構而成，藉由讀取資料庫的內容自動排版生成頁面，盡量減少自己手動新增的狀況，為了讓我自己方便，我還另外還做了一些幫助我上傳資料的小工具。程式碼的部分可能還很雜，將會自己慢慢統整。<br>2016/12/1</p>');
     $('#myModal').modal('show');
-    });
+});
 </script>
 </body>
 </html>
