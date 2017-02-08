@@ -32,10 +32,9 @@ include 'navigation.php';
             ?>
         <div class="col-lg-4 col-sm-6">
     			<?php
-    			if($rows['productimage'] != "")
-			{
+    			if($rows['productimage'] != ""){
     				$pic = $rows['productimage'];
-    				echo '<img class="albumcover img-rounded" src="./productupload/uploadedimg/'.$pic.'" alt="Generic placeholder image">';
+            echo '<img class="albumcover img-rounded" src="http://'.$_SERVER['SERVER_NAME'].'/CodeIgniter-productupload/uploads/files/'.$pic.'" alt="">';
     			}
     			?>
           	<h2><i><?php echo $rows['productname']; ?></i></h2>
@@ -54,6 +53,7 @@ include 'navigation.php';
 } //while結束 php結束
  ?> 
         </div> <!--end of row-->
+
 <!-- START THE FEATURETTES -->
       <hr class="featurette-divider">
       <div class="row featurette">

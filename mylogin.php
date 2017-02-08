@@ -11,10 +11,12 @@ if (isset($_POST['submitBtn'])) {
   $useremail = trim($_POST['useremail']);
   $useremail = strip_tags($useremail);
   $useremail = htmlspecialchars($useremail);
+  $useremail = mysqli_real_escape_string($db->conn, $useremail);
 
   $password = trim($_POST['userpassword']);
   $password = strip_tags($password);
   $password = htmlspecialchars($password);
+  $password = mysqli_real_escape_string($db->conn, $password);
 
   if (empty($useremail)) {
     $error = true;
@@ -136,12 +138,12 @@ if (isset($_POST['submitBtn'])) {
             } else { 
           ?>
             <div class="panel-footer ">
-            <p style="text-align:center;">還不是會員嗎? <a href="myregister.php" onClick="">&nbsp;按我註冊</a></p>
+            <p style="text-align:center;">還不是會員嗎? <a href="myregisterwithAJAX.php" onClick="">&nbsp;按我註冊</a></p>
             <hr>
             <p style="text-align:center;"><a href="index.php" onClick="">&nbsp;回首頁</a></p>
             </div>
           <?php
-            } //end of else
+            }
           ?>
         </div>
       </div>

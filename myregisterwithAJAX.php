@@ -10,21 +10,25 @@ if (isset($_POST['singupBtn'])) {
   $username = trim($_POST['username']);
   $username = strip_tags($username);
   $username = htmlspecialchars($username);
+  $username = mysqli_real_escape_string($db->conn, $username);
   
   $useremail = trim($_POST['useremail']);
   $useremail = strip_tags($useremail);
   $useremail = htmlspecialchars($useremail);
+  $useremail = mysqli_real_escape_string($db->conn, $useremail);
   
   $password = trim($_POST['userpassword']);
   $password = strip_tags($password);
   $password = htmlspecialchars($password);
+  $password = mysqli_real_escape_string($db->conn, $password);
 
   $checkpass = trim($_POST['checkpass']);
   $checkpass = strip_tags($checkpass);
   $checkpass = htmlspecialchars($checkpass);
+  $checkpass = mysqli_real_escape_string($db->conn, $checkpass);
 
   $password = hash('sha256', $password);
-  
+
   $sql = "INSERT INTO users (username, useremail, userpassword) VALUES ('$username', '$useremail', '$password')";
   $result = mysqli_query($db->conn, $sql);
   if ($result) {

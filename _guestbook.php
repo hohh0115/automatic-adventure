@@ -74,11 +74,23 @@
 					        	<td><?php echo $rows['comment']; ?></td>
 					      	</tr>
 					      	<tr>
-							<td valign="top">日期 </td>
-							<td valign="top">:</td>
-							<td><?php echo $rows['datetime']; ?></td>
+								<td valign="top">日期: </td>
+								<td valign="top">:</td>
+								<td><?php echo $rows['datetime']; ?></td>
 							</tr>
 				    	</table>
+				    	<div class="reloadDIV">
+					    	<table class="table table-hover messageContent">
+					    		<tr>
+					    			<td style="width: 150px">管理員回覆：</td>
+									<td><?php echo $rows['admin_reply']; ?></td>
+					    		</tr>
+					    		<tr>
+					    			<td>回覆時間：</td>
+									<td><?php echo $rows['reply_time']; ?></td>
+					    		</tr>
+					    	</table>
+					    </div>
 					</td>
 				</tr>
 			</table>

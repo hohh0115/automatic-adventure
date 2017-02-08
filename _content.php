@@ -15,7 +15,15 @@ include 'navigation.php';
 
 if (isset($_GET['productid']) == "") {
   header('Location: index.php'); //不會直接進入_content.php
-}
+} else {
+    $sql = 'SELECT * FROM product WHERE productid = '.$_GET['productid'];
+    $result = mysqli_query($db->conn, $sql); 
+    $rows = mysqli_fetch_assoc($result);
+    if ($_GET['productid'] !== $rows['productid']) {
+      header('Location: index.php'); //防範直接更改URL進入不存在的商品頁
+    }
+  }
+
  ?>
 <body>
   <div class="container maincontent">
@@ -31,7 +39,7 @@ if (isset($_GET['productid']) == "") {
           <li><a href="#b" data-toggle="tab" onclick="myfunction('second')">作者介紹</a></li>
           <li><a href="#c" data-toggle="tab" onclick="myfunction('third')">專輯曲目</a></li>
         </ul>
-        <img id="img" class="img-rounded img-responsive" <?php echo 'src="./productupload/uploadedimg/'.$rows['productimage'].'">'; ?>
+        <img id="img" class="img-rounded img-responsive" <?php echo 'src="http://'.$_SERVER['SERVER_NAME'].'/CodeIgniter-productupload/uploads/files/'.$rows['productimage'].'" alt="">'; ?>
         <div class="tab-content">  
           <div class="tab-pane active" id="a">
             <p><?php echo $rows['description']; ?></p>
@@ -141,6 +149,7 @@ if (isset($_GET['productid']) == "") {
         <p class="text-muted">About Music Company.轉載必究.營業時間：週二至週日 1100~21:00.</p>
         </footer>
   </div> <!--end of container-->
+
 <!-- Modals that pop up the video-->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -160,11 +169,11 @@ if (isset($_GET['productid']) == "") {
   function myfunction(img_tracker){
         if (img_tracker == 'first'){
           img.style.display = "block" ;
-          <?php echo 'img.src="./productupload/uploadedimg/'.$rows['productimage'].'";'; ?>
+          <?php echo 'img.src="http://localhost/CodeIgniter-productupload/uploads/files/'.$rows['productimage'].'";'; ?>
           img.style.width = "300px" ;
         } else if (img_tracker =='second'){
           img.style.display = "block" ;
-          <?php echo 'img.src="./productupload/uploadedimg/'.$rows['singerphoto'].'";'; ?>
+          <?php echo 'img.src="http://localhost/CodeIgniter-productupload/uploads/files/'.$rows['singerphoto'].'";'; ?>
           img.style.width = "320px" ;
         } else if (img_tracker == 'third') {
           img.style.display = "none" ;
